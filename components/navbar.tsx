@@ -55,7 +55,7 @@ const Navbar = () => {
               {user ? (
                 <>
                   <Link
-                      href="/protected/roles"
+                      href="/dashboard/roles"
                       className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"
                   >
                 <span className="flex items-center">
@@ -63,7 +63,7 @@ const Navbar = () => {
                 </span>
                   </Link>
                   <Link
-                    href="/protected/dashboard"
+                    href="/dashboard"
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"
                   >
                     Dashboard
