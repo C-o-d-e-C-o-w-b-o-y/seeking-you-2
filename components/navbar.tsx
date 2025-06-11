@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import { Heart, Menu, LogOut, Users } from "lucide-react";
+import { Heart, Menu, LogOut } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import { User } from "@supabase/supabase-js";
 
@@ -51,17 +51,17 @@ const Navbar = () => {
 
           {!loading && (
             <div className="hidden md:flex items-center space-x-4">
-              <Link
-                href="/protected/roles"
-                className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"
-              >
-                <span className="flex items-center">
-                  <Users className="h-5 w-5 mr-1" />
-                  Team Roles
-                </span>
-              </Link>
+              <Link href='/about' className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md">About</Link>
               {user ? (
                 <>
+                  <Link
+                      href="/protected/roles"
+                      className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"
+                  >
+                <span className="flex items-center">
+                  Team Roles
+                </span>
+                  </Link>
                   <Link
                     href="/protected/dashboard"
                     className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md"
