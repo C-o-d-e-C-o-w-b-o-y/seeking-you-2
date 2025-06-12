@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Users, Heart, ShoppingBag, MapPin } from "lucide-react";
+import { CollapsibleSection } from "@/components/ui/CollapsibleSection";
+import { ComingSoonSections } from "@/components/comingSoonSections";
 
 interface FeatureCardProps {
   icon: React.ReactNode;
@@ -22,6 +24,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 };
 
 export default function Home() {
+  const currentMonth = new Date().toLocaleString('default', { month: 'long' });
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="text-center mb-16">
@@ -38,6 +41,13 @@ export default function Home() {
         >
           Get Started <ArrowRight className="ml-2" />
         </Link>
+      </div>
+
+      <div className="mb-20">
+        <CollapsibleSection 
+          title={`Our other projects which are coming at the end of ${currentMonth}!`} 
+          children={<ComingSoonSections/>}
+        />
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
