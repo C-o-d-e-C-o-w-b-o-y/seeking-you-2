@@ -42,7 +42,7 @@ export const ComingSoonSections = () => {
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-green-500 mr-2">✓</span>
-                                    <span className="text-gray-600">Fully dynamic and realistic weather system. Interacts with our unique physics and tyre models, watch out for those puddles!</span>
+                                    <span className="text-gray-600">Fully dynamic and realistic weather system. Interacts with our unique physics and tyre models!</span>
                                 </li>
                                 <li className="flex items-start">
                                     <span className="text-green-500 mr-2">✓</span>
@@ -104,16 +104,11 @@ export const ComingSoonSections = () => {
                                 Exclusive Gameplay Preview
                             </h4>
                             <div className="relative rounded-lg overflow-hidden shadow-xl max-w-2xl mx-auto">
-                                <video
-                                    className="w-full"
-                                    controls
-                                    loop
-                                    muted
-                                >
-                                    <source src="/videos/gamePlay.mp4" type="video/mp4" />
-                                    <source src="/videos/gamePlay.webm" type="video/webm" /> // Optional: for better browser support
-                                    Your browser does not support the video tag.
-                                </video>
+                                <iframe width="100%" height="500" src="https://www.youtube.com/embed/xtO8mAyY2Nk?si=MafyHi-6k-2ZzEsE"
+                                    title="YouTube video player" frameBorder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerPolicy="strict-origin-when-cross-origin"
+                                    allowFullScreen></iframe>
                             </div>
                             <p className="text-center text-sm text-gray-600 mt-2">
                                 * Actual in-game footage

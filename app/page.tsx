@@ -1,14 +1,23 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { ComingSoonSections } from "@/components/comingSoonSections";
+import { CollapsibleSection } from "@/components/ui/CollapsibleSection";
 
 export default function Home() {
   const currentMonth = new Date().toLocaleString('default', { month: 'long' });
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                Discover New Friends Today
-            </h1>
+      <div className="text-center mb-16">
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
+          Discover New Friends Today
+        </h1>
+
+        <div className="mb-20">
+          <CollapsibleSection
+            title={`Click to see our other projects which are coming at the end of ${currentMonth}!`}
+            children={<ComingSoonSections />}
+          />
+        </div>
 
             <div className='mb-10 overflow-hidden rounded-xl'>
                 <iframe width="100%" height="500" src="https://www.youtube.com/embed/asWJv5_1DUU?si=8Qo81dn4VKEhwT64"
