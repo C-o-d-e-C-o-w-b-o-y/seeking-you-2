@@ -98,7 +98,26 @@ export const ComingSoonSections = () => {
                                     className="w-full rounded-lg shadow-lg transition-transform group-hover:scale-105"
                                 />
                             </div>
-
+                        </div>
+                        <div className="mt-6 bg-gray-50 rounded-lg p-6">
+                            <h4 className="text-center text-lg font-semibold text-gray-800 mb-4">
+                                Exclusive Gameplay Preview
+                            </h4>
+                            <div className="relative rounded-lg overflow-hidden shadow-xl max-w-2xl mx-auto">
+                                <video
+                                    className="w-full"
+                                    controls
+                                    loop
+                                    muted
+                                >
+                                    <source src="/videos/gamePlay.mp4" type="video/mp4" />
+                                    <source src="/videos/gamePlay.webm" type="video/webm" /> // Optional: for better browser support
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <p className="text-center text-sm text-gray-600 mt-2">
+                                * Actual in-game footage
+                            </p>
                         </div>
                     </div>
                 </CollapsibleSection>
